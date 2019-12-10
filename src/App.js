@@ -1,13 +1,13 @@
 //TODO: STEP 1 - Import the useState hook.
 import React from "react";
-import  {useState} from "react";
+import {useState} from "react";
 import "./App.css";
 import BottomRow from "./BottomRow";
 
 function App() {
   //TODO: STEP 2 - Establish your applictaion's state with some useState hooks.  You'll need one for the home score and another for the away score.
   const [homeScore, setHomeScore] = useState(0);
-  // const [timer, setTimer] = useState(0);
+  const [timer, setTimer] = useState(0);
   const [awayScore, setAwayScore] = useState(0);
  
 
@@ -24,7 +24,6 @@ function App() {
   let setAwayScoreButtonF = ()=>{
     setAwayScore(awayScore + 3)
   };
-
 
   return (
     <div className="container">
@@ -54,7 +53,6 @@ function App() {
         <div className="awayButtons">
           <button className="awayButtons__touchdown" onClick={() => setAwayScoreButtonT()}>Away Touchdown</button>
           <button className="awayButtons__fieldGoal" onClick={() => setAwayScoreButtonF()}>Away Field Goal</button>
-          
         </div>
       </section>
     </div>
@@ -62,14 +60,3 @@ function App() {
 }
 
 export default App;
-
-
-// - [ ] Add the `onClick` handler to each function
-// - [ ] Determine how much you will need to increment the score for each button
-//   - [ ] A touchdown is worth 7 points (assume the following extra point is made)
-//   - [ ] A field goal is worth 3 points
-// - [ ] Inside the click handlers on each button, use the setter functions for each team to increment the appropriate team's score by the correct amount.
-
-/* <div onClick={() => setLightOn(!lightOn)} className="App">
-      {lightOn === false ? <img src={white} /> : <img src={yellow} />}
-    </div> */
