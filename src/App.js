@@ -10,7 +10,10 @@ function App() {
   const [timer, setTimer] = useState(0);
   const [awayScore, setAwayScore] = useState(0);
  
-
+  // function sum (a, b){
+  //   return a + b;
+  // }
+// **********⬆️********* As far as I got with modules lol
 
   let setHomeScoreButtonT = ()=>{
     setHomeScore(homeScore + 7)
